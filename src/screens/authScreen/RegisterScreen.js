@@ -1,14 +1,17 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { View, Text, Button } from "react-native";
+import React from "react";
 
-const RegisterScreen = () => {
+const RegisterScreen = ({ navigation }) => {
   return (
-    <View>
-      <Text>RegisterScreen</Text>
+    <View style={{flex:1 , backgroundColor:"#fff" , justifyContent:"center" , alignItems:"center" }}>
+      <Text>Register Screen</Text>
+
+      <Button
+        title="Back to Login"
+        onPress={() => navigation.goBack()}
+      />
     </View>
-  )
-}
+  );
+};
 
-export default RegisterScreen
-
-const styles = StyleSheet.create({})
+export default RegisterScreen;
